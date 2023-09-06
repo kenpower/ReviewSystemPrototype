@@ -2,17 +2,50 @@
     --primary: #6750a4;
     --primary-light: #d4cde9;
     --primary-dark: #3f2a7a;
+    --secondary: #03DAC6;
+    --error:#B00020;
+    --success:#64DD17;
+
     font-family: 'Roboto', sans-serif;
 
     --large:1.3em;
     --heading:1.2em;
     --gap-medium: 10px;
     --gap-tiny: 2px;
+    --profile-size: 50px;
     
   }
 
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    margin-bottom: var(--large);
+}
+
+#header > img{
+        border-radius: 50%;
+        width:var(--profile-size);
+        height:var(--profile-size);
+        object-fit:cover;
+        
+}
+#logo{
+    display: flex;
+    align-items: center;
+    gap:var(--gap-medium);
+    padding: 5px;
+}
+#logo > img{
+
+    width:var(--profile-size);
+    height:var(--profile-size);
+    object-fit:cover;
+    
+}
 #maintab .selected{
-        background-color: var(--primary);
+        background-color: var(--primary-light);
         color: white;   
     }
 
@@ -21,21 +54,21 @@
     gap:var(--gap-medium);
     font-size: var(--large);
     padding:5px;
-
-
+    padding-bottom:0px;
 }
 
 #maintab *{
     padding:0.2em;
+    text-decoration: none;
 }
 
-#deliverablegrid{
+#grid{
     display: flex;
     flex-direction: column;
     background-color: var(--primary-light);
 }
 
-#deliverablegrid .row{
+#grid .row{
     display: flex;
     flex-direction: row;
     gap:var(--gap-medium);
@@ -43,7 +76,7 @@
     justify-content:space-between;
 }
 
-#deliverablegrid .headings{
+#grid .headings{
     font-size: var(--large);
 }
 
@@ -52,7 +85,7 @@
     width: 100%
 }
 
-.row div:has(button){
+.row div:has(a.button){
     display: flex;
     gap:var(--gap-tiny)
 }
@@ -62,14 +95,39 @@ a{
     color: var(--primary-dark);
 }
 
-button{
+a.button{
     border-radius: 10px;
     background-color: var(--primary-dark); 
-    color:azure
+    color:azure;
+    padding: 0.3em;
 }
 
-button.disabled{
+a.button.disabled{
     background-color: var(--primary-light);
     color: var(--primary-dark); 
 
 }
+
+.submit{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap:var(--gap-medium);
+    padding:  10px;
+}
+
+a.ok{
+    background-color: var(--success);
+    color:azure;
+    width: 4em;
+    text-align: center;     
+}
+
+a.cancel{
+    background-color: var(--error  );
+    color:azure;
+    width: 4em;
+    text-align: center; 
+}
+
