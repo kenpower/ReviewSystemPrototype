@@ -1,0 +1,75 @@
+:root {
+    --primary: #6750a4;
+    --primary-light: #d4cde9;
+    --primary-dark: #3f2a7a;
+    font-family: 'Roboto', sans-serif;
+
+    --large:1.3em;
+    --heading:1.2em;
+    --gap-medium: 10px;
+    --gap-tiny: 2px;
+    
+  }
+
+#maintab .selected{
+        background-color: var(--primary);
+        color: white;   
+    }
+
+#maintab {
+    display: flex;
+    gap:var(--gap-medium);
+    font-size: var(--large);
+    padding:5px;
+
+
+}
+
+#maintab *{
+    padding:0.2em;
+}
+
+#deliverablegrid{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-light);
+}
+
+#deliverablegrid .row{
+    display: flex;
+    flex-direction: row;
+    gap:var(--gap-medium);
+    padding: 5px;
+    justify-content:space-between;
+}
+
+#deliverablegrid .headings{
+    font-size: var(--large);
+}
+
+
+.row *{
+    width: 100%
+}
+
+.row div:has(button){
+    display: flex;
+    gap:var(--gap-tiny)
+}
+
+a{
+    text-decoration: underline;
+    color: var(--primary-dark);
+}
+
+button{
+    border-radius: 10px;
+    background-color: var(--primary-dark); 
+    color:azure
+}
+
+button.disabled{
+    background-color: var(--primary-light);
+    color: var(--primary-dark); 
+
+}
