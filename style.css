@@ -24,7 +24,7 @@
     margin-bottom: var(--large);
 }
 
-#header > img{
+#header .profile{
         border-radius: 50%;
         width:var(--profile-size);
         height:var(--profile-size);
